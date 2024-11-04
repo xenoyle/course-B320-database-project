@@ -2,6 +2,7 @@
 DROP TABLE IF EXISTS Enrollments;
 DROP TABLE IF EXISTS Students;
 DROP TABLE IF EXISTS CourseSchedule;
+DROP TABLE IF EXISTS Buildings;
 DROP TABLE IF EXISTS Rooms;
 DROP TABLE IF EXISTS Campuses;
 DROP TABLE IF EXISTS Courses;
@@ -289,6 +290,38 @@ INSERT INTO Subjects (Subject, SubjectDescription) VALUES
     ('UNIV', 'University Studies'),
     ('USC', 'University of South Carolina');
 
+-- Create Buildings table
+CREATE TABLE Buildings (
+    BuildingID INT PRIMARY KEY AUTO_INCREMENT,
+    CampusID INT,
+    BuildingCode VARCHAR(10),
+    BuildingName VARCHAR(255),
+    FOREIGN KEY (CampusID) REFERENCES Campuses(CampusID)
+);
+INSERT INTO Buildings (CampusID, BuildingCode, BuildingName) VALUES
+    (1, 'CMPCCTR', 'Campus Center'),
+    (1, 'HARG', 'Hargray Building'),
+    (1, 'LIBR2', 'Library Building'),
+    (1, 'RECCTR', 'Recreation Center'),
+    (1, 'SCITEC', 'Science & Technology Building'),
+    (2, 'ARTS', 'Art Studio'),
+    (2, 'CFA', 'Center for the Arts'),
+    (2, 'MSCI', 'Marine Science Building'),
+    (2, 'NWCSTL', 'New Castle Building'),
+    (2, 'VAD', 'Visual Arts & Design Building'),
+    (2, '1100BO', '1100 Boundary Street'),
+    (3, 'HHHC', 'Hilton Head Hospitality Center');
+
+-- Create Campuses Table
+CREATE TABLE Campuses (
+    CampusID INT PRIMARY KEY AUTO_INCREMENT,
+    CampusName VARCHAR(100) NOT NULL
+);
+INSERT INTO Campuses (CampusName, Address) VALUES
+    ('Bluffton Campus', '1 University Blvd., Bluffton, SC 29909'),
+    ('Beaufort Campus', '801 Carteret Street, Beaufort, SC 29902'),
+    ('Hilton Head Island Campus', '1 Sand Shark Drive, Hilton Head Island, SC 29928');
+
 -- Create Courses Table
 CREATE TABLE Courses (
     CourseID INT PRIMARY KEY AUTO_INCREMENT,
@@ -297,20 +330,46 @@ CREATE TABLE Courses (
     FOREIGN KEY (SubjectID) REFERENCES Subjects(SubjectID)
 );
 
--- Create Campuses Table
-CREATE TABLE Campuses (
-    CampusID INT PRIMARY KEY AUTO_INCREMENT,
-    CampusName VARCHAR(100) NOT NULL
-);
 
 -- Create Rooms Table
 CREATE TABLE Rooms (
     RoomID INT PRIMARY KEY AUTO_INCREMENT,
     CampusID INT,
-    Building VARCHAR(100),
+    Building VARCHAR(10),  -- References BuildingCode in Buildings table
     Room VARCHAR(10),
-    FOREIGN KEY (CampusID) REFERENCES Campuses(CampusID)
+    FOREIGN KEY (CampusID) REFERENCES Campuses(CampusID),
+    FOREIGN KEY (Building) REFERENCES Buildings(BuildingCode)
 );
+
+INSERT INTO Rooms (CampusID, Building, Room) VALUES
+    -- Bluffton Campus (CampusID = 1)
+    (1, 'CMPCCTR', '106A'),
+    (1, 'CMPCCTR', '105'),
+    (1, 'HARG', '270'),
+    (1, 'LIBR2', '207'),
+    (1, 'LIBR2', '213'),
+    (1, 'RECCTR', '118'),
+    (1, 'RECCTR', '114'),
+    (1, 'RECCTR', '222'),
+    (1, 'RECCTR', '260'),
+    (1, 'SCITEC', '102'),
+    
+    -- Beaufort Campus (CampusID = 2)
+    (2, 'ARTS', '101'),
+    (2, 'CFA', '102'),
+    (2, 'MSCI', '104'),
+    (2, 'NWCSTL', '200'),
+    (2, 'VAD', '112'),
+    (2, '1100BO', '1'),
+    (2, '1100BO', '111'),
+    (2, 'NWCSTL', '205'),
+    
+    -- Hilton Head Island Campus (CampusID = 3)
+    (3, 'HHHC', '207'),
+    (3, 'HHHC', '213'),
+    (3, 'HHHC', '102'),
+    (3, 'HHHC', '202'),
+    (3, 'HHHC', '302');
 
 -- Create Course Schedule Table
 CREATE TABLE CourseSchedule (
