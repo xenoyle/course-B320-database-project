@@ -290,6 +290,17 @@ INSERT INTO Subjects (Subject, SubjectDescription) VALUES
     ('UNIV', 'University Studies'),
     ('USC', 'University of South Carolina');
 
+-- Create Campuses Table
+CREATE TABLE Campuses (
+    CampusID INT PRIMARY KEY AUTO_INCREMENT,
+    CampusName VARCHAR(100) NOT NULL,
+    Address VARCHAR(255) NOT NULL
+);
+INSERT INTO Campuses (CampusName, Address) VALUES
+    ('Bluffton Campus', '1 University Blvd., Bluffton, SC 29909'),
+    ('Beaufort Campus', '801 Carteret Street, Beaufort, SC 29902'),
+    ('Hilton Head Island Campus', '1 Sand Shark Drive, Hilton Head Island, SC 29928');
+
 -- Create Buildings table
 CREATE TABLE Buildings (
     BuildingID INT PRIMARY KEY AUTO_INCREMENT,
@@ -298,6 +309,7 @@ CREATE TABLE Buildings (
     BuildingName VARCHAR(255),
     FOREIGN KEY (CampusID) REFERENCES Campuses(CampusID)
 );
+
 INSERT INTO Buildings (CampusID, BuildingCode, BuildingName) VALUES
     (1, 'CMPCCTR', 'Campus Center'),
     (1, 'HARG', 'Hargray Building'),
@@ -312,21 +324,12 @@ INSERT INTO Buildings (CampusID, BuildingCode, BuildingName) VALUES
     (2, '1100BO', '1100 Boundary Street'),
     (3, 'HHHC', 'Hilton Head Hospitality Center');
 
--- Create Campuses Table
-CREATE TABLE Campuses (
-    CampusID INT PRIMARY KEY AUTO_INCREMENT,
-    CampusName VARCHAR(100) NOT NULL
-);
-INSERT INTO Campuses (CampusName, Address) VALUES
-    ('Bluffton Campus', '1 University Blvd., Bluffton, SC 29909'),
-    ('Beaufort Campus', '801 Carteret Street, Beaufort, SC 29902'),
-    ('Hilton Head Island Campus', '1 Sand Shark Drive, Hilton Head Island, SC 29928');
-
 -- Create Courses Table
 CREATE TABLE Courses (
     CourseID INT PRIMARY KEY AUTO_INCREMENT,
     SubjectID INT,
     CourseNumber VARCHAR(10) NOT NULL,
+    CourseName VARCHAR(255) NOT NULL,
     FOREIGN KEY (SubjectID) REFERENCES Subjects(SubjectID)
 );
 
@@ -473,7 +476,7 @@ VALUES
     ('56', 'Internship in Psychology I', 'B495'),
     ('56', 'Internship in Psychology II', 'B496'),
     ('56', 'Advanced Independent Study', 'B498'),
-    ('56', 'Individual Research', 'B499')
+    ('56', 'Individual Research', 'B499');
 
 -- Create Rooms Table
 CREATE TABLE Rooms (
