@@ -33,7 +33,7 @@ CREATE TABLE Professors (
     ProfessorID INT PRIMARY KEY AUTO_INCREMENT,
     ProfessorName VARCHAR(100) NOT NULL
 );
-INSERT INTO Professors (ProfessorName) VALUES
+
 -- Insert unique professors into the Professors table
 INSERT INTO Professors (ProfessorName) VALUES
     ('Abbott, Amy E.'),
