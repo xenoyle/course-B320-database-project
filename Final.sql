@@ -296,6 +296,7 @@ CREATE TABLE Campuses (
     CampusName VARCHAR(100) NOT NULL,
     Address VARCHAR(255) NOT NULL
 );
+
 INSERT INTO Campuses (CampusName, Address) VALUES
     ('Bluffton Campus', '1 University Blvd., Bluffton, SC 29909'),
     ('Beaufort Campus', '801 Carteret Street, Beaufort, SC 29902'),
@@ -333,8 +334,15 @@ CREATE TABLE Courses (
     FOREIGN KEY (SubjectID) REFERENCES Subjects(SubjectID)
 );
 
-INSERT INTO Courses (SubjectID, CourseName, CourseNumber) 
-VALUES 
+INSERT INTO Courses (SubjectID, CourseName, CourseNumber) VALUES
+    /* GEN EDS */
+    ('26', 'Composition & Rhetoric', 'B101'), 
+    ('13', 'Introduction to Computer Concepts', 'B101'), 
+    ('13', 'Introduction to Computer Concepts', 'B101'), 
+    ('13', 'Introduction to Computer Concepts', 'B101'), 
+    ('13', 'Introduction to Computer Concepts', 'B101'), 
+    ('13', 'Introduction to Computer Concepts', 'B101'), 
+    ('13', 'Introduction to Computer Concepts', 'B101'), 
 	/* COMPUTER SCIENCE */
 	('13', 'Introduction to Computer Concepts', 'B101'), 
 	('13', 'Introduction to HTML and CSS', 'B102'),  
@@ -535,6 +543,19 @@ CREATE TABLE CourseSchedule (
     FOREIGN KEY (ProfessorID) REFERENCES Professors(ProfessorID),
     FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID)
 );
+
+INSERT INTO CourseSchedule (ProfessorID, CourseID, RoomID, CRN, AcademicPeriodDesc, Days, Time, MaxEnrollment, ActualEnrolled, MeetingTypeDesc) VALUES 
+	/* COMPUTER SCIENCE */
+	(1, 1, 1, '10101', 'Fall 2021', 'MWF', '10:00 AM - 10:50 AM', 30, 30, 'Lecture'),
+    (2, 2, 2, '10102', 'Fall 2021', 'MWF', '11:00 AM - 11:50 AM', 30, 30, 'Lecture'),
+    (3, 3, 3, '10103', 'Fall 2021', 'MWF', '12:00 PM - 12:50 PM', 30, 30, 'Lecture'),
+    (4, 4, 4, '10104', 'Fall 2021', 'MWF', '1:00 PM - 1:50 PM', 30, 30, 'Lecture'),
+    (5, 5, 5, '10105', 'Fall 2021', 'MWF', '2:00 PM - 2:50 PM', 30, 30, 'Lecture'),
+    (6, 6, 6, '10106', 'Fall 2021', 'MWF', '3:00 PM - 3:50 PM', 30, 30, 'Lecture'),
+    (7, 7, 7, '10107', 'Fall 2021', 'MWF', '4:00 PM - 4:50 PM', 30, 30, 'Lecture'),
+    (8, 8, 8, '10108', 'Fall 2021', 'MWF', '5:00 PM - 5:50 PM', 30, 30, 'Lecture'),
+    (9, 9, 9, '10109', 'Fall 2021', 'MWF', '6:00 PM - 6:50 PM', 30, 30, 'Lecture'),
+    (10, 10, 10, '10110', 'Fall 2021', 'MWF', '7:00 PM - 7:50 PM', 30, 30, 'Lecture'),
 
 -- Create Students Table with StatusID as foreign key
 CREATE TABLE Students (
