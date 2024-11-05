@@ -548,6 +548,138 @@ CREATE TABLE Students (
     FOREIGN KEY (StatusID) REFERENCES StudentStatuses(StatusID)
 );
 
+INSERT INTO Students (FirstName, LastName, Email, Major, EnrollmentYear, StatusID) VALUES
+    /* INCOMING */
+    -- CSCI
+    ('Aiden Blackwell','aiden.blackwell@example.com','CSCI',2025,1),
+    ('Emma Greenfield','emma.greenfield@example.com','CSCI',2025,1),
+    ('Jacob Whitaker','jacob.whitaker@example.com','CSCI',2025,1),
+    ('Olivia Patel','olivia.patel@example.com','CSCI',2025,1),
+    ('Ethan Raj','ethan.raj@example.com','CSCI',2025,1),
+    ('Sophia Gutierrez','sophia.gutierrez@example.com','CSCI',2025,1),
+    ('William Nguyen','william.nguyen@example.com','CSCI',2025,1),
+    ('Isabella Hernandez','isabella.hernandez@example.com','CSCI',2025,1),
+    ('Lucas Flores','lucas.flores@example.com','CSCI',2025,1),
+    ('Ava Diaz','ava.diaz@example.com','CSCI',2025,1),
+    -- ISAT
+    ('Liam Morales','liam.morales@example.com','ISAT',2025,1),
+    ('Mia Duarte','mia.duarte@example.com','ISAT',2025,1),
+    ('Noah Reyes','noah.reyes@example.com','ISAT',2025,1),
+    ('Isabella Rosales','isabella.rosales@example.com','ISAT',2025,1),
+    ('Daniel Quintana','daniel.quintana@example.com','ISAT',2025,1),
+    ('Emma Campos','emma.campos@example.com','ISAT',2025,1),
+    ('Sebastian Ortiz','sebastian.ortiz@example.com','ISAT',2025,1),
+    ('Olivia Mendoza','olivia.mendoza@example.com','ISAT',2025,1),
+    ('Mateo Vargas','mateo.vargas@example.com','ISAT',2025,1),
+    ('Ava Santana','ava.santana@example.com','ISAT',2025,1),
+    --PSYC
+    ('Michael Guerrero','michael.guerrero@example.com','PSYC',2025,1),
+    ('Emily Ramirez','emily.ramirez@example.com','PSYC',2025,1),
+    ('Alexander Jimenez','alexander.jimenez@example.com','PSYC',2025,1),
+    ('Isabella Castillo','isabella.castillo@example.com','PSYC',2025,1),
+    ('Joshua Alvarez','joshua.alvarez@example.com','PSYC',2025,1),
+
+    /* FRESHMEN */
+    -- CSCI
+    ('David Romero','david.romero@example.com','CSCI',2024,2),
+    ('Avery Gutierrez','avery.gutierrez@example.com','CSCI',2024,2),
+    ('Owen Reyes','owen.reyes@example.com','CSCI',2024,2),
+    ('Aubrey Mendoza','aubrey.mendoza@example.com','CSCI',2024,2),
+    ('Ethan Santana','ethan.santana@example.com','CSCI',2024,2),
+    -- ISAT
+    ('Sophia Vargas','sophia.vargas@example.com','ISAT',2024,2),
+    ('Logan Diaz','logan.diaz@example.com','ISAT',2024,2),
+    ('Isabella Morales','isabella.morales@example.com','ISAT',2024,2),
+    ('Mason Duarte','mason.duarte@example.com','ISAT',2024,2),
+    ('Abigail Rosales','abigail.rosales@example.com','ISAT',2024,2),
+    --PSYC
+    ('Jacob Campos','jacob.campos@example.com','PSYC',2024,2),
+    ('Emma Ortiz','emma.ortiz@example.com','PSYC',2024,2),
+    ('William Quintana','william.quintana@example.com','PSYC',2024,2),
+    ('Mia Alvarez','mia.alvarez@example.com','PSYC',2024,2),
+    ('Lucas Castillo','lucas.castillo@example.com','PSYC',2024,2),
+
+    /* SOPHOMORES */
+    -- CSCI
+    ('Liam Flores','liam.flores@example.com','CSCI',2023,3),
+    ('Ava Patel','ava.patel@example.com','CSCI',2023,3),
+    ('Noah Raj','noah.raj@example.com','CSCI',2023,3),
+    ('Isabella Whitaker','isabella.whitaker@example.com','CSCI',2023,3),
+    ('Ethan Greenfield','ethan.greenfield@example.com','CSCI',2023,3),
+    -- ISAT
+    ('Olivia Blackwell','olivia.blackwell@example.com','ISAT',2023,3),
+    ('Alexander Nguyen','alexander.nguyen@example.com','ISAT',2023,3),
+    ('Mia Hernandez','mia.hernandez@example.com','ISAT',2023,3),
+    ('Michael Gutierrez','michael.gutierrez@example.com','ISAT',2023,3),
+    ('Emily Diaz','emily.diaz@example.com','ISAT',2023,3),
+    --PSYC
+    ('Emma Guerrero','emma.guerrero@example.com','PSYC',2023,3),
+    ('Joshua Ramirez','joshua.ramirez@example.com','PSYC',2023,3),
+    ('Avery Jimenez','avery.jimenez@example.com','PSYC',2023,3),
+    ('Owen Castillo','owen.castillo@example.com','PSYC',2023,3),
+    ('Aubrey Alvarez','aubrey.alvarez@example.com','PSYC',2023,3),
+
+    /* JUNIORS */
+    -- CSCI
+    ('Daniel Morales','daniel.morales@example.com','CSCI',2022,4),
+    ('Sophia Duarte','sophia.duarte@example.com','CSCI',2022,4),
+    ('Sebastian Reyes','sebastian.reyes@example.com','CSCI',2022,4),
+    ('Abigail Rosales','abigail.rosales@example.com','CSCI',2022,4),
+    ('Logan Vargas','logan.vargas@example.com','CSCI',2022,4),
+    -- ISAT
+    ('Mason Campos','mason.campos@example.com','ISAT',2022,4),
+    ('Isabella Ortiz','isabella.ortiz@example.com','ISAT',2022,4),
+    ('Jacob Quintana','jacob.quintana@example.com','ISAT',2022,4),
+    ('Mia Mendoza','mia.mendoza@example.com','ISAT',2022,4),
+    ('William Santana','william.santana@example.com','ISAT',2022,4),
+    --PSYC
+    ('Liam Guerrero','liam.guerrero@example.com','PSYC',2022,4),
+    ('Ava Ramirez','ava.ramirez@example.com','PSYC',2022,4),
+    ('Noah Jimenez','noah.jimenez@example.com','PSYC',2022,4),
+    ('Isabella Castillo','isabella.castillo@example.com','PSYC',2022,4),
+    ('Ethan Alvarez','ethan.alvarez@example.com','PSYC',2022,4),
+
+    /* SENIORS */
+    -- CSCI
+    ('Olivia Romero','olivia.romero@example.com','CSCI',2021,5),
+    ('Alexander Gutierrez','alexander.gutierrez@example.com','CSCI',2021,5),
+    ('Mia Reyes','mia.reyes@example.com','CSCI',2021,5),
+    ('Michael Mendoza','michael.mendoza@example.com','CSCI',2021,5),
+    ('Emily Santana','emily.santana@example.com','CSCI',2021,5),
+    -- ISAT
+    ('Joshua Vargas','joshua.vargas@example.com','ISAT',2021,5),
+    ('Avery Diaz','avery.diaz@example.com','ISAT',2021,5),
+    ('Owen Morales','owen.morales@example.com','ISAT',2021,5),
+    ('Aubrey Duarte','aubrey.duarte@example.com','ISAT',2021,5),
+    ('David Rosales','david.rosales@example.com','ISAT',2021,5),
+    --PSYC
+    ('Emma Campos','emma.campos@example.com','PSYC',2021,5),
+    ('Jacob Ortiz','jacob.ortiz@example.com','PSYC',2021,5),
+    ('Sophia Quintana','sophia.quintana@example.com','PSYC',2021,5),
+    ('Liam Alvarez','liam.alvarez@example.com','PSYC',2021,5),
+    ('Ava Castillo','ava.castillo@example.com','PSYC',2021,5),
+
+    /* ALUMNI */
+    -- CSCI
+    ('Noah Ramirez','noah.ramirez@example.com','CSCI',2020,6),
+    ('Isabella Jimenez','isabella.jimenez@example.com','CSCI',2019,6),
+    ('Ethan Guerrero','ethan.guerrero@example.com','CSCI',2018,6),
+    ('Olivia Flores','olivia.flores@example.com','CSCI',2017,6),
+    ('Alexander Patel','alexander.patel@example.com','CSCI',2016,6),
+    -- ISAT
+    ('Mia Raj','mia.raj@example.com','ISAT',2020,6),
+    ('Michael Whitaker','michael.whitaker@example.com','ISAT',2019,6),
+    ('Emily Greenfield','emily.greenfield@example.com','ISAT',2018,6),
+    ('Joshua Blackwell','joshua.blackwell@example.com','ISAT',2017,6),
+    ('Avery Nguyen','avery.nguyen@example.com','ISAT',2016,6),
+    --PSYC
+    ('Owen Hernandez','owen.hernandez@example.com','PSYC',2020,6),
+    ('Aubrey Gutierrez','aubrey.gutierrez@example.com','PSYC',2019,6),
+    ('David Diaz','david.diaz@example.com','PSYC',2018,6),
+    ('Emma Campos','emma.campos@example.com','PSYC',2017,6),
+    ('Jacob Morales','jacob.morales@example.com','PSYC',2016,6)
+
+
 -- Create Enrollments Table
 CREATE TABLE Enrollments (
     EnrollmentID INT PRIMARY KEY AUTO_INCREMENT,
