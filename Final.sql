@@ -110,3 +110,11 @@ CREATE TABLE Enrollments (
     FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
     FOREIGN KEY (ScheduleID) REFERENCES CourseSchedule(ScheduleID)
 );
+-- Create ProfessorAssignments Table
+CREATE TABLE ProfessorAssignments (
+    AssignmentID INT PRIMARY KEY AUTO_INCREMENT,
+    ScheduleID INT,
+    ProfessorID INT,
+    FOREIGN KEY (ScheduleID) REFERENCES CourseSchedule(ScheduleID),
+    FOREIGN KEY (ProfessorID) REFERENCES Professors(ProfessorID)
+);
