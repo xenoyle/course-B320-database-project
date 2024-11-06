@@ -118,3 +118,17 @@ CREATE TABLE ProfessorAssignments (
     FOREIGN KEY (ScheduleID) REFERENCES CourseSchedule(ScheduleID),
     FOREIGN KEY (ProfessorID) REFERENCES Professors(ProfessorID)
 );
+-- Optional: Create GradePoints Table for GPA Calculation (if needed)
+CREATE TABLE GradePoints (
+    LetterGrade CHAR(2) PRIMARY KEY,
+    GradePoint DECIMAL(3, 2)
+);
+
+-- Optional: Create GPAHistory Table (if tracking GPA changes over terms)
+CREATE TABLE GPAHistory (
+    GPAHistoryID INT PRIMARY KEY AUTO_INCREMENT,
+    StudentID INT,
+    Term VARCHAR(20),
+    GPA DECIMAL(4, 2),
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+);
