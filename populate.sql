@@ -274,38 +274,28 @@ INSERT INTO Buildings (CampusID, BuildingCode, BuildingName) VALUES
 
 INSERT INTO Courses (SubjectID, CourseName, CourseNumber) VALUES
     /* GEN EDS */
-    ('11', 'Public Communication', 'B140'), 
+    ('3', 'Understanding Other Cultures', 'B101'),
+    ('10', 'General Chemistry I', 'B111'),
     ('11', 'Interpersonal Communication', 'B201'),
     ('26', 'Composition & Rhetoric', 'B101'), 
     ('26', 'Composition & Literature', 'B102'),
-    ('26', 'Enhanced Composition', 'B105'), 
-    ('26', 'Enhanced Composition and Literature', 'B106'), 
-    ('29', 'Beginning French I', 'B101'), 
-    ('29', 'Beginning French II', 'B102'),
-    ('29', 'Beginning French I', 'B109'), 
-    ('29', 'Beginning French II', 'B110'), 
+    ('30', 'World Regional Geography', 'B121'), 
     ('31', 'Beginning German I', 'B101'), 
     ('31', 'Beginning German II', 'B102'), 
     ('33', 'European Civilization from Ancient Times to the Mid-17th Century', 'B101'), 
-    ('33', 'European Civiization from the Mid-17th Century', 'B102'), 
-    ('33', 'History of America from Discovery to 1865', 'B111'), 
-    ('33', 'History of the United States from 1865 to the Present Day', 'B112'), 
-    ('33', 'World History to 1500', 'B115'), 
-    ('33', 'World History from 1500 to Present', 'B116'), 
+    ('33', 'History of American from Discovery to 1865', 'B111'), 
     ('45', 'College Algebra', 'B111'), 
     ('45', 'Precalculus Mathematics', 'B115'), 
     ('45', 'Calculus I', 'B141'), 
     ('45', 'Calculus II', 'B142'), 
     ('45', 'Calculus III', 'B240'), 
-    ('60', 'Beginning Spanish I', 'B101'), 
-    ('60', 'Beginning Spanish II', 'B102'), 
-    ('60', 'Beginning Spanish I', 'B109'), 
-    ('60', 'Beginning Spanish II', 'B110'), 
+    ('53', 'Introduction to Philosophy', 'B102'),
+    ('54', 'The Physics of How Things Work I', 'B101'),
+    ('54', 'The Physics of How Things Work I Laboratory', 'B101L'),
     ('62', 'Fundamentals of Probability & Statistics', 'B240'), 
-    ('62', 'Introduction to Probabilty and Statistics', 'B340'), 
-     
-    
-    ('13', 'Introduction to Computer Concepts', 'B101'), 
+    ('63', 'Fundamentals of Acting', 'B170'), 
+    ('63', 'Understanding and Appreciation of Theatre', 'B200'), 
+
 	/* COMPUTER SCIENCE */
 	('13', 'Introduction to Computer Concepts', 'B101'), 
 	('13', 'Introduction to HTML and CSS', 'B102'),  
@@ -364,6 +354,7 @@ INSERT INTO Courses (SubjectID, CourseName, CourseNumber) VALUES
 	('13', 'Industrial or Research Internship', 'B699'), 
 	('13', 'Research Project', 'B797'),  
 	('13', 'Master''s Thesis', 'B799'),
+
 	/* INFORMATION SYSTEMS AND TECHNOLOGY */
 	('40', 'Introduction to HTML and CSS', 'B102'),  
 	('40', 'Computer Programming Techniques, Practices, and Tools', 'B104'),  
@@ -399,6 +390,7 @@ INSERT INTO Courses (SubjectID, CourseName, CourseNumber) VALUES
 	('40', 'High Performance Computing', 'B469'),  
 	('40', 'Software System Process & Management', 'B470'),  
 	('40', 'Computer Science Co-op/Internship', 'B499'),
+
     /* PSYCHOLOGY */
     ('56', 'Introduction to Psychology', 'B101'),
     ('56', 'Research Methods in Psychology', 'B200'),
