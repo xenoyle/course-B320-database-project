@@ -274,8 +274,8 @@ INSERT INTO Buildings (CampusID, BuildingCode, BuildingName) VALUES
 
 INSERT INTO Courses (SubjectID, CourseName, CourseNumber) VALUES
     /* GEN EDS */
-    ('3', 'Understanding Other Cultures', 'B101'),
-    ('10', 'General Chemistry I', 'B111'),
+    ('3', 'Understanding Other Cultures', 'B102'),
+    ('9', 'Microbiology', 'B230'),
     ('11', 'Interpersonal Communication', 'B201'),
     ('26', 'Composition & Rhetoric', 'B101'), 
     ('26', 'Composition & Literature', 'B102'),
@@ -443,46 +443,143 @@ INSERT INTO Courses (SubjectID, CourseName, CourseNumber) VALUES
 
 INSERT INTO Rooms (CampusID, Building, Room) VALUES
     -- Bluffton Campus (CampusID = 1)
-    (1, 'CMPCCTR', '106A'),
     (1, 'CMPCCTR', '105'),
+    (1, 'CMPCCTR', '106A'),
+    (1, 'CMPCCTR', '106C'),
+    (1, 'CMPCCTR', '113'),
+    (1, 'CMPCCTR', '148'),
+
+    (1, 'HARG', '156'),
+    (1, 'HARG', '158'),
+    (1, 'HARG', '159'),
+    (1, 'HARG', '160'),
+    (1, 'HARG', '160B'),
+    (1, 'HARG', '162'),
+    (1, 'HARG', '204'),
+    (1, 'HARG', '260'),
     (1, 'HARG', '270'),
+    (1, 'HARG', '271'),
+    (1, 'HARG', '274'),
+    (1, 'HARG', '275'),
+    (1, 'HARG', '276'),
+    (1, 'HARG', '277'),
+    (1, 'HARG', '278'),
+
+    (1, 'LIBR2', '144'),
+    (1, 'LIBR2', '147'),
     (1, 'LIBR2', '207'),
     (1, 'LIBR2', '213'),
-    (1, 'RECCTR', '118'),
-    (1, 'RECCTR', '114'),
-    (1, 'RECCTR', '222'),
-    (1, 'RECCTR', '260'),
+    (1, 'LIBR2', '219'),
+    (1, 'LIBR2', '237'),
+    (1, 'LIBR2', '238'),
+    (1, 'LIBR2', '241'),
+    (1, 'LIBR2', '243'),
+    (1, 'LIBR2', '267'),
+
+    (1, 'RECCTR', '1'),
+
     (1, 'SCITEC', '102'),
+    (1, 'SCITEC', '114'),
+    (1, 'SCITEC', '118'),
+    (1, 'SCITEC', '122'),
+    (1, 'SCITEC', '123'),
+    (1, 'SCITEC', '132'),
+    (1, 'SCITEC', '136'),
+    (1, 'SCITEC', '205'),
+    (1, 'SCITEC', '222'),
+    (1, 'SCITEC', '223'),
+    (1, 'SCITEC', '231'),
+    (1, 'SCITEC', '260'),
+    (1, 'SCITEC', '261'),
+    (1, 'SCITEC', '263'),
+    (1, 'SCITEC', '277'),
     
     -- Beaufort Campus (CampusID = 2)
     (2, 'ARTS', '101'),
+
     (2, 'CFA', '102'),
+    (2, 'CFA', '116'),
+
     (2, 'MSCI', '104'),
+
     (2, 'NWCSTL', '200'),
+
     (2, 'VAD', '112'),
+
     (2, '1100BO', '1'),
     (2, '1100BO', '111'),
+
     (2, 'NWCSTL', '205'),
     
     -- Hilton Head Island Campus (CampusID = 3)
+    
+    (3, 'HHHC', '103'),
+    (3, 'HHHC', '104'),
+    (3, 'HHHC', '114'),
+    (3, 'HHHC', '115'),
+    (3, 'HHHC', '202'),
+    (3, 'HHHC', '204'),
+    (3, 'HHHC', '205'),
     (3, 'HHHC', '207'),
     (3, 'HHHC', '213'),
-    (3, 'HHHC', '102'),
-    (3, 'HHHC', '202'),
-    (3, 'HHHC', '302');
+    (3, 'HHHC', '214');
 
 INSERT INTO CourseSchedule (ProfessorID, CourseID, RoomID, CRN, AcademicPeriodDesc, Days, Time, MaxEnrollment, ActualEnrolled, MeetingTypeDesc) VALUES 
+    /* GEN EDS */
+    (142, 3, 6, '28258', '202408', 'M W F', '6:30 PM - 9:30 PM', 30, 30, 'Class'),
+    (142, 3, 6, '28258', '202408', 'M W F', '7:00 PM - 9:30 PM', 30, 30, 'Exam'),
+    (3, 9, 2, '27330', '202408', 'T Th', '11:15 AM - 12:30 PM', 30, 30, 'Class'),
+    (3, 9, 2, '27330', '202408', 'Th', '12:40 PM - 2:30 PM', 30, 30, 'Lab'),
+    (3, 9, 2, '27330', '202408', 'T', '10:45 AM - 1:15 PM', 30, 30, 'Exam'),
+    (3, 11, 3, '10103', '202408', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 'Class'),
+    (4, 26, 4, '10104', '202408', 'M W F', '1:00 PM - 1:50 PM', 30, 30, 'Class'),
+    (5, 26, 5, '10105', '202408', 'M W F', '2:00 PM - 2:50 PM', 30, 30, 'Class'),
+    (6, 30, 6, '10106', '202408', 'M W F', '3:00 PM - 3:50 PM', 30, 30, 'Class'),
+    (7, 31, 7, '10107', '202408', 'M W F', '4:00 PM - 4:50 PM', 30, 30, 'Class'),
+    (8, 31, 8, '10108', '202408', 'M W F', '5:00 PM - 5:50 PM', 30, 30, 'Class'),
+    (9, 33, 9, '10109', '202408', 'M W F', '6:00 PM - 6:50 PM', 30, 30, 'Class'),
+    (10, 33, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class'),
+    (10, 45, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class'),
+    (10, 45, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class'),
+    (10, 45, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class'),
+    (10, 45, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class'),
+    (10, 45, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class'),
+
 	/* COMPUTER SCIENCE */
-	(1, 1, 1, '10101', 'Fall 2021', 'MWF', '10:00 AM - 10:50 AM', 30, 30, 'Lecture'),
-    (2, 2, 2, '10102', 'Fall 2021', 'MWF', '11:00 AM - 11:50 AM', 30, 30, 'Lecture'),
-    (3, 3, 3, '10103', 'Fall 2021', 'MWF', '12:00 PM - 12:50 PM', 30, 30, 'Lecture'),
-    (4, 4, 4, '10104', 'Fall 2021', 'MWF', '1:00 PM - 1:50 PM', 30, 30, 'Lecture'),
-    (5, 5, 5, '10105', 'Fall 2021', 'MWF', '2:00 PM - 2:50 PM', 30, 30, 'Lecture'),
-    (6, 6, 6, '10106', 'Fall 2021', 'MWF', '3:00 PM - 3:50 PM', 30, 30, 'Lecture'),
-    (7, 7, 7, '10107', 'Fall 2021', 'MWF', '4:00 PM - 4:50 PM', 30, 30, 'Lecture'),
-    (8, 8, 8, '10108', 'Fall 2021', 'MWF', '5:00 PM - 5:50 PM', 30, 30, 'Lecture'),
-    (9, 9, 9, '10109', 'Fall 2021', 'MWF', '6:00 PM - 6:50 PM', 30, 30, 'Lecture'),
-    (10, 10, 10, '10110', 'Fall 2021', 'MWF', '7:00 PM - 7:50 PM', 30, 30, 'Lecture'),
+	(1, 1, 1, '10101', '202408', 'M W F', '10:00 AM - 10:50 AM', 30, 30, 'Class'),
+    (2, 2, 2, '10102', '202408', 'M W F', '11:00 AM - 11:50 AM', 30, 30, 'Class'),
+    (3, 3, 3, '10103', '202408', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 'Class'),
+    (4, 4, 4, '10104', '202408', 'M W F', '1:00 PM - 1:50 PM', 30, 30, 'Class'),
+    (5, 5, 5, '10105', '202408', 'M W F', '2:00 PM - 2:50 PM', 30, 30, 'Class'),
+    (6, 6, 6, '10106', '202408', 'M W F', '3:00 PM - 3:50 PM', 30, 30, 'Class'),
+    (7, 7, 7, '10107', '202408', 'M W F', '4:00 PM - 4:50 PM', 30, 30, 'Class'),
+    (8, 8, 8, '10108', '202408', 'M W F', '5:00 PM - 5:50 PM', 30, 30, 'Class'),
+    (9, 9, 9, '10109', '202408', 'M W F', '6:00 PM - 6:50 PM', 30, 30, 'Class'),
+    (10, 10, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class'),
+
+    /* INFORMATION SYSTEMS AND TECHNOLOGY */
+	(1, 1, 1, '10101', '202408', 'M W F', '10:00 AM - 10:50 AM', 30, 30, 'Class'),
+    (2, 2, 2, '10102', '202408', 'M W F', '11:00 AM - 11:50 AM', 30, 30, 'Class'),
+    (3, 3, 3, '10103', '202408', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 'Class'),
+    (4, 4, 4, '10104', '202408', 'M W F', '1:00 PM - 1:50 PM', 30, 30, 'Class'),
+    (5, 5, 5, '10105', '202408', 'M W F', '2:00 PM - 2:50 PM', 30, 30, 'Class'),
+    (6, 6, 6, '10106', '202408', 'M W F', '3:00 PM - 3:50 PM', 30, 30, 'Class'),
+    (7, 7, 7, '10107', '202408', 'M W F', '4:00 PM - 4:50 PM', 30, 30, 'Class'),
+    (8, 8, 8, '10108', '202408', 'M W F', '5:00 PM - 5:50 PM', 30, 30, 'Class'),
+    (9, 9, 9, '10109', '202408', 'M W F', '6:00 PM - 6:50 PM', 30, 30, 'Class'),
+    (10, 10, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class'),
+
+    /* PSYCHOLOGY */
+	(1, 1, 1, '10101', '202408', 'M W F', '10:00 AM - 10:50 AM', 30, 30, 'Class'),
+    (2, 2, 2, '10102', '202408', 'M W F', '11:00 AM - 11:50 AM', 30, 30, 'Class'),
+    (3, 3, 3, '10103', '202408', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 'Class'),
+    (4, 4, 4, '10104', '202408', 'M W F', '1:00 PM - 1:50 PM', 30, 30, 'Class'),
+    (5, 5, 5, '10105', '202408', 'M W F', '2:00 PM - 2:50 PM', 30, 30, 'Class'),
+    (6, 6, 6, '10106', '202408', 'M W F', '3:00 PM - 3:50 PM', 30, 30, 'Class'),
+    (7, 7, 7, '10107', '202408', 'M W F', '4:00 PM - 4:50 PM', 30, 30, 'Class'),
+    (8, 8, 8, '10108', '202408', 'M W F', '5:00 PM - 5:50 PM', 30, 30, 'Class'),
+    (9, 9, 9, '10109', '202408', 'M W F', '6:00 PM - 6:50 PM', 30, 30, 'Class'),
+    (10, 10, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class');
 
 INSERT INTO Students (FirstName, LastName, Email, Major, EnrollmentYear, StatusID) VALUES
     /* INCOMING */
