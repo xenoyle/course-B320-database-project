@@ -529,13 +529,13 @@ INSERT INTO Rooms (RoomID, CampusID, Building, Room) VALUES
     (64, 3, 'HHHC', '213'),
     (65, 3, 'HHHC', '214');
 
-INSERT INTO CourseSchedule (ScheduleID, ProfessorID, CourseID, RoomID, CRN, AcademicPeriodDesc, Days, Time, MaxEnrollment, ActualEnrolled, MeetingTypeDesc) VALUES 
+INSERT INTO CourseSchedule (ScheduleID, ProfessorID, CourseID, RoomID, CRN, AcademicPeriodDesc, Days, Time, MaxEnrollment, ActualEnrolled, CourseTypeID) VALUES 
     /* GEN EDS */
-    (1, 142, 3, 6, '28258', '202408', 'M W F', '6:30 PM - 9:30 PM', 30, 30, 'Class'),
-    (2, 142, 3, 6, '28258', '202408', 'M W F', '7:00 PM - 9:30 PM', 30, 30, 'Exam'),
-    (3, 3, 9, 2, '27330', '202408', 'T Th', '11:15 AM - 12:30 PM', 30, 30, 'Class'),
-    (4, 3, 9, 2, '27330', '202408', 'Th', '12:40 PM - 2:30 PM', 30, 30, 'Lab'),
-    (5, 3, 9, 2, '27330', '202408', 'T', '10:45 AM - 1:15 PM', 30, 30, 'Exam'),
+    (1, 142, 3, 6, '28258', '202408', 'M W F', '6:30 PM - 9:30 PM', 30, 30, 1),  -- 'Class' corresponds to CourseTypeID 1
+    (2, 142, 3, 6, '28258', '202408', 'M W F', '7:00 PM - 9:30 PM', 30, 30, 2),  -- 'Exam' corresponds to CourseTypeID 2
+    (3, 3, 9, 2, '27330', '202408', 'T Th', '11:15 AM - 12:30 PM', 30, 30, 1),  -- 'Class' corresponds to CourseTypeID 1
+    (4, 3, 9, 2, '27330', '202408', 'Th', '12:40 PM - 2:30 PM', 30, 30, 3),  -- 'Lab' corresponds to CourseTypeID 3
+    (5, 3, 9, 2, '27330', '202408', 'T', '10:45 AM - 1:15 PM', 30, 30, 2);  -- 'Exam' corresponds to CourseTypeID 2
     (6, 3, 11, 3, '10103', '202408', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 'Class'),
     (7, 4, 26, 4, '10104', '202408', 'M W F', '1:00 PM - 1:50 PM', 30, 30, 'Class'),
     (8, 5, 26, 5, '10105', '202408', 'M W F', '2:00 PM - 2:50 PM', 30, 30, 'Class'),
