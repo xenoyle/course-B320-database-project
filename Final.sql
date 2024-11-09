@@ -12,6 +12,7 @@ DROP TABLE IF EXISTS Campuses;
 DROP TABLE IF EXISTS Subjects;
 DROP TABLE IF EXISTS Professors;
 DROP TABLE IF EXISTS StudentStatuses;
+Drop TABLE IF EXISTS CourseType;
 
 -- Create StudentStatuses Table
 CREATE TABLE StudentStatuses (
@@ -79,10 +80,11 @@ CREATE TABLE CourseSchedule (
     Time VARCHAR(50),
     MaxEnrollment INT,
     ActualEnrolled INT,
-    MeetingTypeDesc VARCHAR(50),
+    CourseTypeID INT,
     FOREIGN KEY (CourseID) REFERENCES Courses(CourseID),
     FOREIGN KEY (ProfessorID) REFERENCES Professors(ProfessorID),
-    FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID)
+    FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID),
+    FOREIGN KEY (CourseTypeID) REFERENCES CourseType(CourseTypeID)
 );
 
 -- Create Students Table
@@ -130,4 +132,9 @@ CREATE TABLE GPAHistory (
     Term VARCHAR(20),
     GPA DECIMAL(4, 2),
     FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+);
+-- Create CourseType Table
+CREATE TABLE CourseType (
+    CourseTypeID INT PRIMARY KEY,
+    CourseTypeName VARCHAR(20) NOT NULL
 );

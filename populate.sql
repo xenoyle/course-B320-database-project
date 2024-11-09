@@ -6,6 +6,11 @@ INSERT INTO StudentStatuses (StatusID, StatusName) VALUES
     (5, 'Senior'),
     (6, 'Alumni');
 
+INSERT INTO CourseType (CourseTypeID, CourseTypeName) VALUES
+    (1, 'Class'),
+    (2, 'Exam'),
+    (3, 'Lab');
+
 INSERT INTO Professors (ProfessorID, ProfessorName) VALUES
     (1, 'Abbott, Amy E.'),
     (2, 'Adams, Ann-Marie'),
