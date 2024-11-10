@@ -74,6 +74,7 @@ CREATE TABLE CourseSchedule (
     CRN VARCHAR(20) NOT NULL,
     CourseID INT,
     ProfessorID INT,
+    ProfessorName VARCHAR(100),  -- Optional column
     RoomID INT,
     AcademicPeriodDesc VARCHAR(50),
     Days VARCHAR(20),
@@ -84,7 +85,8 @@ CREATE TABLE CourseSchedule (
     FOREIGN KEY (CourseID) REFERENCES Courses(CourseID),
     FOREIGN KEY (ProfessorID) REFERENCES Professors(ProfessorID),
     FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID),
-    FOREIGN KEY (CourseTypeID) REFERENCES CourseType(CourseTypeID)
+    FOREIGN KEY (CourseTypeID) REFERENCES CourseType(CourseTypeID),
+    CHECK ((ProfessorID IS NOT NULL) OR (ProfessorName IS NOT NULL))
 );
 
 -- Create Students Table
