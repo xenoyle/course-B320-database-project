@@ -323,35 +323,63 @@ INSERT INTO GradePoints (LetterGrade, GradePoint) VALUES
     ('D-', 0.70),
     ('F', 0.00);
 
--- Enrollments for PSYC Freshman Fall Semester
 INSERT INTO Enrollments (StudentID, ScheduleID, EnrollmentDate, Grade) VALUES
-    -- Psyc freshman
-    (46, FALL_SCHEDULE_ID_FOR_PSYCB101, '2024-08-20', NULL),
-    (46, FALL_SCHEDULE_ID_FOR_ENGLB101, '2024-08-20', NULL),
-    (46, FALL_SCHEDULE_ID_FOR_GERMB101, '2024-08-20', NULL),
-    (46, FALL_SCHEDULE_ID_FOR_MATHB111, '2024-08-20', NULL),
-    (46, FALL_SCHEDULE_ID_FOR_COMMB201, '2024-08-20', NULL),
+    (1, 1040, '2024-08-15', NULL), -- Aiden Morgan enrolled in CSCI B150
+    (1, 650, '2024-08-15', NULL), -- Aiden Morgan enrolled in MATH B111
+    (1, 247, '2024-08-15', NULL), -- Aiden Morgan enrolled in ENGL B101
+    (1, 716, '2024-08-15', NULL), -- Aiden Morgan enrolled in GERM B101
+    (1, 1004, '2024-08-15', NULL), -- Aiden Morgan enrolled in COMM B201
 
-    (47, FALL_SCHEDULE_ID_FOR_PSYCB101, '2024-08-20', NULL),
-    (47, FALL_SCHEDULE_ID_FOR_ENGLB101, '2024-08-20', NULL),
-    (47, FALL_SCHEDULE_ID_FOR_GERMB101, '2024-08-20', NULL),
-    (47, FALL_SCHEDULE_ID_FOR_MATHB111, '2024-08-20', NULL),
-    (47, FALL_SCHEDULE_ID_FOR_COMMB201, '2024-08-20', NULL),
+    (2, 1040, '2024-08-15', NULL), -- Emma Young enrolled in CSCI B150
+    (2, 650, '2024-08-15', NULL), -- Emma Young enrolled in MATH B111
+    (2, 247, '2024-08-15', NULL), -- Emma Young enrolled in ENGL B101
+    (2, 716, '2024-08-15', NULL), -- Emma Young enrolled in GERM B101
+    (2, 1004, '2024-08-15', NULL), -- Emma Young enrolled in COMM B201
 
-    (48, FALL_SCHEDULE_ID_FOR_PSYCB101, '2024-08-20', NULL),
-    (48, FALL_SCHEDULE_ID_FOR_ENGLB101, '2024-08-20', NULL),
-    (48, FALL_SCHEDULE_ID_FOR_GERMB101, '2024-08-20', NULL),
-    (48, FALL_SCHEDULE_ID_FOR_MATHB111, '2024-08-20', NULL),
-    (48, FALL_SCHEDULE_ID_FOR_COMMB201, '2024-08-20', NULL),
+    (3, 1040, '2024-08-15', NULL), -- Jacob Holland enrolled in CSCI B150
+    (3, 650, '2024-08-15', NULL), -- Jacob Holland enrolled in MATH B111
+    (3, 247, '2024-08-15', NULL), -- Jacob Holland enrolled in ENGL B101
+    (3, 716, '2024-08-15', NULL), -- Jacob Holland enrolled in GERM B101
+    (3, 1004, '2024-08-15', NULL), -- Jacob Holland enrolled in COMM B201
 
-    (49, FALL_SCHEDULE_ID_FOR_PSYCB101, '2024-08-20', NULL),
-    (49, FALL_SCHEDULE_ID_FOR_ENGLB101, '2024-08-20', NULL),
-    (49, FALL_SCHEDULE_ID_FOR_GERMB101, '2024-08-20', NULL),
-    (49, FALL_SCHEDULE_ID_FOR_MATHB111, '2024-08-20', NULL),
-    (49, FALL_SCHEDULE_ID_FOR_COMMB201, '2024-08-20', NULL),
+    (4, 1040, '2024-08-15', NULL), -- Olivia Blake enrolled in CSCI B150
+    (4, 650, '2024-08-15', NULL), -- Olivia Blake enrolled in MATH B111
+    (4, 247, '2024-08-15', NULL), -- Olivia Blake enrolled in ENGL B101
+    (4, 716, '2024-08-15', NULL), -- Olivia Blake enrolled in GERM B101
+    (4, 1004, '2024-08-15', NULL), -- Olivia Blake enrolled in COMM B201
 
-    (50, FALL_SCHEDULE_ID_FOR_PSYCB101, '2024-08-20', NULL),
-    (50, FALL_SCHEDULE_ID_FOR_ENGLB101, '2024-08-20', NULL),
-    (50, FALL_SCHEDULE_ID_FOR_GERMB101, '2024-08-20', NULL),
-    (50, FALL_SCHEDULE_ID_FOR_MATHB111, '2024-08-20', NULL),
-    (50, FALL_SCHEDULE_ID_FOR_COMMB201, '2024-08-20', NULL);
+    (5, 1040, '2024-08-15', NULL), -- Ethan Brooks enrolled in CSCI B150
+    (5, 650, '2024-08-15', NULL), -- Ethan Brooks enrolled in MATH B111
+    (5, 247, '2024-08-15', NULL), -- Ethan Brooks enrolled in ENGL B101
+    (5, 716, '2024-08-15', NULL), -- Ethan Brooks enrolled in GERM B101
+    (5, 1004, '2024-08-15', NULL), -- Ethan Brooks enrolled in COMM B201
+
+    (6, 1040, '2024-08-15', NULL), -- Sophia Tran enrolled in CSCI B150
+    (6, 650, '2024-08-15', NULL), -- Sophia Tran enrolled in MATH B111
+    (6, 247, '2024-08-15', NULL), -- Sophia Tran enrolled in ENGL B101
+    (6, 716, '2024-08-15', NULL), -- Sophia Tran enrolled in GERM B101
+    (6, 1004, '2024-08-15', NULL), -- Sophia Tran enrolled in COMM B201
+
+    (7, 1040, '2024-08-15', NULL), -- William Liu enrolled in CSCI B150
+    (7, 650, '2024-08-15', NULL), -- William Liu enrolled in MATH B111
+    (7, 247, '2024-08-15', NULL), -- William Liu enrolled in ENGL B101
+    (7, 716, '2024-08-15', NULL), -- William Liu enrolled in GERM B101
+    (7, 1004, '2024-08-15', NULL), -- William Liu enrolled in COMM B201
+
+    (8, 1040, '2024-08-15', NULL), -- Isabella Shah enrolled in CSCI B150
+    (8, 650, '2024-08-15', NULL), -- Isabella Shah enrolled in MATH B111
+    (8, 247, '2024-08-15', NULL), -- Isabella Shah enrolled in ENGL B101
+    (8, 716, '2024-08-15', NULL), -- Isabella Shah enrolled in GERM B101
+    (8, 1004, '2024-08-15', NULL), -- Isabella Shah enrolled in COMM B201
+
+    (9, 1040, '2024-08-15', NULL), -- Lucas Yoon enrolled in CSCI B150
+    (9, 650, '2024-08-15', NULL), -- Lucas Yoon enrolled in MATH B111
+    (9, 247, '2024-08-15', NULL), -- Lucas Yoon enrolled in ENGL B101
+    (9, 716, '2024-08-15', NULL), -- Lucas Yoon enrolled in GERM B101
+    (9, 1004, '2024-08-15', NULL), -- Lucas Yoon enrolled in COMM B201
+
+    (10, 1040, '2024-08-15', NULL), -- Ava Chen enrolled in CSCI B150
+    (10, 650, '2024-08-15', NULL), -- Ava Chen enrolled in MATH B111
+    (10, 247, '2024-08-15', NULL), -- Ava Chen enrolled in ENGL B101
+    (10, 716, '2024-08-15', NULL), -- Ava Chen enrolled in GERM B101
+    (10, 1004, '2024-08-15', NULL); -- Ava Chen enrolled in COMM B201
