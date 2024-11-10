@@ -9,7 +9,8 @@ INSERT INTO StudentStatuses (StatusID, StatusName) VALUES
 INSERT INTO CourseType (CourseTypeID, CourseTypeName) VALUES
     (1, 'Class'),
     (2, 'Exam'),
-    (3, 'Lab');
+    (3, 'Lab'),
+    (4, 'Web');
 
 INSERT INTO Professors (ProfessorID, ProfessorName) VALUES
     (1, 'Abbott, Amy E.'),
@@ -300,7 +301,7 @@ INSERT INTO Courses (CourseID, SubjectID, CourseName, CourseNumber) VALUES
     (18, 54, 'The Physics of How Things Work I Laboratory', 'B101L'),
     (19, 62, 'Fundamentals of Probability & Statistics', 'B240'), 
     (20, 63, 'Fundamentals of Acting', 'B170'), 
-    (21, 63, 'Understanding and Appreciation of Theatre', 'B200');
+    (21, 63, 'Understanding and Appreciation of Theatre', 'B200'),
 
 	    /* COMPUTER SCIENCE */
     (22, 13, 'Introduction to Computer Concepts', 'B101'), 
@@ -503,7 +504,7 @@ INSERT INTO Rooms (RoomID, CampusID, Building, Room) VALUES
     -- Beaufort Campus (CampusID = 2)
     (47, 2, 'ARTS', '101'),
 
-    (48, 2, 'CFA', '102'),
+    (48, 2, 'CFA', '102'),  ---------- REMEMBER TO ADD BEAUFORT ROOMS ----------
     (49, 2, 'CFA', '116'),
 
     (50, 2, 'MSCI', '104'),
@@ -530,60 +531,83 @@ INSERT INTO Rooms (RoomID, CampusID, Building, Room) VALUES
     (65, 3, 'HHHC', '214');
 
 INSERT INTO CourseSchedule (ScheduleID, ProfessorID, CourseID, RoomID, CRN, AcademicPeriodDesc, Days, Time, MaxEnrollment, ActualEnrolled, CourseTypeID) VALUES 
+    -- CourseTypeID: Class = 1, Exam = 2, Lab = 3
+
     /* GEN EDS */
-    (1, 142, 3, 6, '28258', '202408', 'M W F', '6:30 PM - 9:30 PM', 30, 30, 1),  -- 'Class' corresponds to CourseTypeID 1
-    (2, 142, 3, 6, '28258', '202408', 'M W F', '7:00 PM - 9:30 PM', 30, 30, 2),  -- 'Exam' corresponds to CourseTypeID 2
-    (3, 3, 9, 2, '27330', '202408', 'T Th', '11:15 AM - 12:30 PM', 30, 30, 1),  -- 'Class' corresponds to CourseTypeID 1
-    (4, 3, 9, 2, '27330', '202408', 'Th', '12:40 PM - 2:30 PM', 30, 30, 3),  -- 'Lab' corresponds to CourseTypeID 3
-    (5, 3, 9, 2, '27330', '202408', 'T', '10:45 AM - 1:15 PM', 30, 30, 2);  -- 'Exam' corresponds to CourseTypeID 2
-    (6, 3, 11, 3, '10103', '202408', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 'Class'),
-    (7, 4, 26, 4, '10104', '202408', 'M W F', '1:00 PM - 1:50 PM', 30, 30, 'Class'),
-    (8, 5, 26, 5, '10105', '202408', 'M W F', '2:00 PM - 2:50 PM', 30, 30, 'Class'),
-    (9, 6, 30, 6, '10106', '202408', 'M W F', '3:00 PM - 3:50 PM', 30, 30, 'Class'),
-    (10, 7, 31, 7, '10107', '202408', 'M W F', '4:00 PM - 4:50 PM', 30, 30, 'Class'),
-    (11, 8, 31, 8, '10108', '202408', 'M W F', '5:00 PM - 5:50 PM', 30, 30, 'Class'),
-    (12, 9, 33, 9, '10109', '202408', 'M W F', '6:00 PM - 6:50 PM', 30, 30, 'Class'),
-    (13, 10, 33, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class'),
-    (14, 10, 45, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class'),
-    (15, 10, 45, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class'),
-    (16, 10, 45, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class'),
-    (17, 10, 45, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class'),
-    (18, 10, 45, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class'),
+    (1, 142, 1, 30, '28258', 'Fall2024', 'M W F', '6:30 PM - 9:30 PM', 30, 30, 1),          -- ANTH B102: Understanding Other Cultures 
+    (2, 142, 1, 30, '28258', 'Fall2024', 'M W F', '7:00 PM - 9:30 PM', 30, 30, 2),   
+
+    (3, 3, 2, 14, '27330', 'Fall2024', 'T Th', '11:15 AM - 12:30 PM', 30, 30, 1),           -- BIOL B230: Microbiology
+    (4, 3, 2, 14, '27330', 'Fall2024', 'T', '10:45 AM - 1:15 PM', 30, 30, 2),  
+    (5, 3, 2, 34, '27330', 'Fall2024', 'Th', '12:40 PM - 2:30 PM', 30, 30, 3),              -- BIOL B230L: Microbiology Laboratory
+
+    (6, 169, 3, 15, '28486', 'Fall2024', 'M W', '11:15 AM - 12:30 PM', 30, 30, 1),          -- COMM B201: Interpersonal Communication
+    (7, 169, 3, 15, '28486', 'Fall2024', 'M', '10:45 AM - 1:15 PM', 30, 30, 2),
+
+    (8, 62, 4, 12, '25882', 'Fall2024', 'M W F', '8:30 AM - 9:20 AM', 20, 20, 1),           -- ENGL B101: Composition & Rhetoric
+    (9, 62, 4, 12, '25882', 'Fall2024', 'M', '8:00 AM - 10:30 AM', 20, 20, 2),
+
+    (10, 98, 5, 10, '25908', 'Fall2024', 'T Th', '9:50 AM - 11:05 AM', 20, 20, 1),       -- ENGL B102: Composition & Literature
+    (11, 98, 5, 10, '25908', 'Fall2024', 'Th', '8:00 AM - 10:30 AM', 20, 20, 2),
+
+    (12, 116, 6, NULL, '28266', 'Fall2024', NULL, NULL, 25, 25, 4),       -- GEOG B121: World Regional Geography
+
+    (10, 3, 7, 7, '10107', 'Fall2024', 'M W F', '4:00 PM - 4:50 PM', 30, 30, 1),      -- GERM B101: Beginning German I
+    (6, 3, 3, 3, '10103', 'Fall2024', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 2),
+
+    (11, 3, 8, 8, '10108', 'Fall2024', 'M W F', '5:00 PM - 5:50 PM', 30, 30, 1),      -- GERM B102: Beginning German II
+    (6, 3, 3, 3, '10103', 'Fall2024', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 2),
+
+    (12, 3, 9, 9, '10109', 'Fall2024', 'M W F', '6:00 PM - 6:50 PM', 30, 30, 1),      -- HIST B101: European Civilization from Ancient Times to the Mid-17th Century
+    (6, 3, 3, 3, '10103', 'Fall2024', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 2),
+
+    (13, 3, 10, 10, '10110', 'Fall2024', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 1),    -- HIST B111: History of American from Discovery to 1865
+    (6, 3, 3, 3, '10103', 'Fall2024', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 2),
+
+    (14, 3, 11, 11, '10111', 'Fall2024', 'M W F', '8:00 PM - 8:50 PM', 30, 30, 1),    -- MATH B111: College Algebra
+    (6, 3, 3, 3, '10103', 'Fall2024', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 2),
+
+    (15, 3, 12, 12, '10112', 'Fall2024', 'M W F', '9:00 PM - 9:50 PM', 30, 30, 1),    -- MATH B115: Precalculus Mathematics
+    (6, 3, 3, 3, '10103', 'Fall2024', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 2),
+
+    (16, 3, 13, 13, '10113', 'Fall2024', 'M W F', '10:00 PM - 10:50 PM', 30, 30, 1),  -- MATH B141: Calculus I
+    (6, 3, 3, 3, '10103', 'Fall2024', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 2),
+
+    (17, 3, 14, 14, '10114', 'Fall2024', 'M W F', '11:00 PM - 11:50 PM', 30, 30, 1),  -- MATH B142: Calculus II
+    (6, 3, 3, 3, '10103', 'Fall2024', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 2),
+
+    (18, 3, 15, 15, '10115', 'Fall2024', 'M W F', '12:00 AM - 12:50 AM', 30, 30, 1),  -- MATH B240: Calculus III
+    (18, 3, 15, 15, '10115', 'Fall2024', 'M W F', '12:00 AM - 12:50 AM', 30, 30, 2),
+
+    (19, 3, 16, 16, '10116', 'Fall2024', 'M W F', '1:00 AM - 1:50 AM', 30, 30, 1),   -- PHIL B102: Introduction to Philosophy
+    (18, 3, 15, 15, '10115', 'Fall2024', 'M W F', '12:00 AM - 12:50 AM', 30, 30, 2),
+
+    (20, 3, 17, 17, '10117', 'Fall2024', 'M W F', '2:00 AM - 2:50 AM', 30, 30, 1),   -- PHYS B101: The Physics of How Things Work I
+    (18, 3, 15, 15, '10115', 'Fall2024', 'M W F', '12:00 AM - 12:50 AM', 30, 30, 2),
+    (21, 3, 18, 18, '10118', 'Fall2024', 'M W F', '3:00 AM - 3:50 AM', 30, 30, 1),   -- PHYS B101L: The Physics of How Things Work I Laboratory
+
+    (22, 3, 19, 19, '10119', 'Fall2024', 'M W F', '4:00 AM - 4:50 AM', 30, 30, 1),   -- STAT B240: Fundamentals of Probability & Statistics
+    (18, 3, 15, 15, '10115', 'Fall2024', 'M W F', '12:00 AM - 12:50 AM', 30, 30, 2),
+
+    (23, 3, 20, 20, '10120', 'Fall2024', 'M W F', '5:00 AM - 5:50 AM', 30, 30, 1),   -- THEA B170: Fundamentals of Acting
+    (18, 3, 15, 15, '10115', 'Fall2024', 'M W F', '12:00 AM - 12:50 AM', 30, 30, 2),
+
+    (24, 3, 21, 21, '10121', 'Fall2024', 'M W F', '6:00 AM - 6:50 AM', 30, 30, 1),   -- THEA B200: Understanding and Appreciation of Theatre
+    (18, 3, 15, 15, '10115', 'Fall2024', 'M W F', '12:00 AM - 12:50 AM', 30, 30, 2),
 
     /* COMPUTER SCIENCE */
-    (19, 1, 1, 1, '10101', '202408', 'M W F', '10:00 AM - 10:50 AM', 30, 30, 'Class'),
-    (20, 2, 2, 2, '10102', '202408', 'M W F', '11:00 AM - 11:50 AM', 30, 30, 'Class'),
-    (21, 3, 3, 3, '10103', '202408', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 'Class'),
-    (22, 4, 4, 4, '10104', '202408', 'M W F', '1:00 PM - 1:50 PM', 30, 30, 'Class'),
-    (23, 5, 5, 5, '10105', '202408', 'M W F', '2:00 PM - 2:50 PM', 30, 30, 'Class'),
-    (24, 6, 6, 6, '10106', '202408', 'M W F', '3:00 PM - 3:50 PM', 30, 30, 'Class'),
-    (25, 7, 7, 7, '10107', '202408', 'M W F', '4:00 PM - 4:50 PM', 30, 30, 'Class'),
-    (26, 8, 8, 8, '10108', '202408', 'M W F', '5:00 PM - 5:50 PM', 30, 30, 'Class'),
-    (27, 9, 9, 9, '10109', '202408', 'M W F', '6:00 PM - 6:50 PM', 30, 30, 'Class'),
-    (28, 10, 10, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class'),
+    (19, 1, 1, 1, '10101', 'Fall2024', 'M W F', '10:00 AM - 10:50 AM', 30, 30, 1),
+    (20, 2, 2, 2, '10102', 'Fall2024', 'M W F', '11:00 AM - 11:50 AM', 30, 30, 2),
 
     /* INFORMATION SYSTEMS AND TECHNOLOGY */
-    (29, 1, 1, 1, '10101', '202408', 'M W F', '10:00 AM - 10:50 AM', 30, 30, 'Class'),
-    (30, 2, 2, 2, '10102', '202408', 'M W F', '11:00 AM - 11:50 AM', 30, 30, 'Class'),
-    (31, 3, 3, 3, '10103', '202408', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 'Class'),
-    (32, 4, 4, 4, '10104', '202408', 'M W F', '1:00 PM - 1:50 PM', 30, 30, 'Class'),
-    (33, 5, 5, 5, '10105', '202408', 'M W F', '2:00 PM - 2:50 PM', 30, 30, 'Class'),
-    (34, 6, 6, 6, '10106', '202408', 'M W F', '3:00 PM - 3:50 PM', 30, 30, 'Class'),
-    (35, 7, 7, 7, '10107', '202408', 'M W F', '4:00 PM - 4:50 PM', 30, 30, 'Class'),
-    (36, 8, 8, 8, '10108', '202408', 'M W F', '5:00 PM - 5:50 PM', 30, 30, 'Class'),
-    (37, 9, 9, 9, '10109', '202408', 'M W F', '6:00 PM - 6:50 PM', 30, 30, 'Class'),
-    (38, 10, 10, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class'),
+    (29, 1, 1, 1, '10101', 'Fall2024', 'M W F', '10:00 AM - 10:50 AM', 30, 30, 1),
+    (30, 2, 2, 2, '10102', 'Fall2024', 'M W F', '11:00 AM - 11:50 AM', 30, 30, 2),
      /* PSYCHOLOGY */
-    (39, 1, 1, 1, '10101', '202408', 'M W F', '10:00 AM - 10:50 AM', 30, 30, 'Class'),
-    (40, 2, 2, 2, '10102', '202408', 'M W F', '11:00 AM - 11:50 AM', 30, 30, 'Class'),
-    (41, 3, 3, 3, '10103', '202408', 'M W F', '12:00 PM - 12:50 PM', 30, 30, 'Class'),
-    (42, 4, 4, 4, '10104', '202408', 'M W F', '1:00 PM - 1:50 PM', 30, 30, 'Class'),
-    (43, 5, 5, 5, '10105', '202408', 'M W F', '2:00 PM - 2:50 PM', 30, 30, 'Class'),
-    (44, 6, 6, 6, '10106', '202408', 'M W F', '3:00 PM - 3:50 PM', 30, 30, 'Class'),
-    (45, 7, 7, 7, '10107', '202408', 'M W F', '4:00 PM - 4:50 PM', 30, 30, 'Class'),
-    (46, 8, 8, 8, '10108', '202408', 'M W F', '5:00 PM - 5:50 PM', 30, 30, 'Class'),
-    (47, 9, 9, 9, '10109', '202408', 'M W F', '6:00 PM - 6:50 PM', 30, 30, 'Class'),
-    (48, 10, 10, 10, '10110', '202408', 'M W F', '7:00 PM - 7:50 PM', 30, 30, 'Class');
+    (39, 1, 1, 1, '10101', 'Fall2024', 'M W F', '10:00 AM - 10:50 AM', 30, 30, 1),
+    (40, 2, 2, 2, '10102', 'Fall2024', 'M W F', '11:00 AM - 11:50 AM', 30, 30, 2)
+    
+    
+    ;
 
 
 INSERT INTO Students (StudentID, FirstName, LastName, Email, Major, EnrollmentYear, StatusID) VALUES
