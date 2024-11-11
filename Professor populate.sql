@@ -280,7 +280,7 @@ INSERT INTO Professors (ProfessorID, ProfessorName) VALUES
     (279, 'Crews, Virginia G.'),
     (280, 'Deming, Emily H.'),
     (281, 'Drawdy, Terry N.'),
-    (282, 'Faciszewski, Nanette J.')
+    (282, 'Faciszewski, Nanette J.'),
     (283, 'Flowers, Cynthia'),
     (284, 'Gaither, Bernard T.'),
     (285, 'Jacobs, Melissa'),
@@ -289,7 +289,7 @@ INSERT INTO Professors (ProfessorID, ProfessorName) VALUES
     (288, 'Morris, Joseph B.'),
     (289, 'Spetrino, William A.'),
     (290, 'Turner, Michael'),
-    (291, 'Warren, David A.')
+    (291, 'Warren, David A.'),
     (292, 'Ahmed, Kishwar'),
     (293, 'Bartlett, Diane H.'),
     (294, 'Becker, Howard S.'),
@@ -309,7 +309,7 @@ INSERT INTO Professors (ProfessorID, ProfessorName) VALUES
     (308, 'Cooper Ward, Dafina M.'),
     (309, 'Deaton, William'),
     (310, 'Ezedi, Shannel'),
-    (311, 'Garbarino, Charles L.')
+    (311, 'Garbarino, Charles L.'),
     (312, 'Johnson, Joleesa A.'),
     (313, 'Knorr, Jodi L.'),
     (314, 'Lott, Sherry'),
@@ -344,7 +344,7 @@ INSERT INTO Professors (ProfessorID, ProfessorName) VALUES
     (343, 'Dennison, Doriann H.'),
     (344, 'Glasson, James P.'),
     (345, 'Hall, Kristen N.'),
-    (346, 'Harris, Jay')
+    (346, 'Harris, Jay'),
     (347, 'Johns, Michael P.'),
     (348, 'Lamkin, Randolph'),
     (349, 'Lowther, Jessica M.'),
@@ -357,7 +357,7 @@ INSERT INTO Professors (ProfessorID, ProfessorName) VALUES
     (356, 'Toler, Amanda'),
     (357, 'Toot, Abbey D.'),
     (358, 'Yang, Zhao'),
-    (359, 'Burns, Eric V.').
+    (359, 'Burns, Eric V.'),
     (360, 'Chiacchiero, John'),
     (361, 'Culbertson, Brittany S.'),
     (362, 'Darden, Mary'),
@@ -443,7 +443,7 @@ INSERT INTO Professors (ProfessorID, ProfessorName) VALUES
     (442, 'Grile, Courtney H.'),
     (443, 'Haskell, Heather G.'),
     (444, 'Hernandez, Susana'),
-    (445, 'Holderfield, Karen A.')
+    (445, 'Holderfield, Karen A.'),
     (446, 'Howell, David R.'),
     (447, 'Kingsbury, Sean'),
     (448, 'Kristoff, Emily Y.'),
@@ -458,7 +458,7 @@ INSERT INTO Professors (ProfessorID, ProfessorName) VALUES
     (457, 'Burckhalter, Teresa S.'),
     (458, 'Butcher, Tyler'),
     (459, 'Delaney, Lindsay M.'),
-    (460, 'Harrison, Christopher')
+    (460, 'Harrison, Christopher'),
     (461, 'Keller, Timothy W.'),
     (462, 'King, Matthew L.'),
     (463, 'Pelletier, James'),
@@ -509,4 +509,4 @@ INSERT INTO Professors (ProfessorID, ProfessorName) VALUES
     (508, 'Ronaszegi, Ida T.'),
     (509, 'Sutton, Gary A.'),
     (510, 'Tarr, Carol A.'),
-    (511, 'Viola, Dominic')
+    (511, 'Viola, Dominic');
