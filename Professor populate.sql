@@ -178,4 +178,12 @@ INSERT INTO Professors (ProfessorID, ProfessorName) VALUES
     (177, 'Zhang, Xiaomei'),
     (178, 'Zientek, Patricia'),
     (179, 'Zinn, David F.'),
-    (180, 'D''Antonio, Jennifer');
+    (180, 'D''Antonio, Jennifer'),
+    (181, 'Borton, Brett A.'),
+    (182, 'Barton, Alison W.'),
+    (183, 'Banbury, Andrea A.'),
+    (184, 'Carberry, Patrick J.'),
+    (185, 'Chojnowski, Jena L.'),
+    (186, 'Youmans, Meagan C.'),
+    (187, 'Williams, Susan C.'),
+    (188, 'Wheeler, Jana L.'); -- Will need to add more
