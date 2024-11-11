@@ -74,7 +74,6 @@ CREATE TABLE CourseSchedule (
     CRN VARCHAR(20) NOT NULL,
     CourseID INT,
     ProfessorID INT,
-    ProfessorName VARCHAR(100),  -- Optional column
     RoomID INT,
     AcademicPeriodDesc VARCHAR(50),
     Days VARCHAR(20),
