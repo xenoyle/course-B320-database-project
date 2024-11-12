@@ -14,6 +14,10 @@ DROP TABLE IF EXISTS Professors;
 DROP TABLE IF EXISTS StudentStatuses;
 Drop TABLE IF EXISTS CourseType;
 
+
+CREATE DATABASE UniversityCoursesDB; -- Highlight this line and run it then hightlight the use statement to use the databases
+USE UniversityCoursesDB;
+
 -- Create StudentStatuses Table
 CREATE TABLE StudentStatuses (
     StatusID INT PRIMARY KEY,
