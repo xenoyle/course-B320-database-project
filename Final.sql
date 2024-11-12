@@ -43,7 +43,6 @@ CREATE TABLE Campuses (
 -- Create Buildings Table
 CREATE TABLE Buildings (
     BuildingID INT PRIMARY KEY,
-    CampusID INT,
     BuildingCode VARCHAR(10),
     BuildingName VARCHAR(255),
     FOREIGN KEY (CampusID) REFERENCES Campuses(CampusID)
@@ -62,10 +61,10 @@ CREATE TABLE Courses (
 CREATE TABLE Rooms (
     RoomID INT PRIMARY KEY,
     CampusID INT,
-    Building VARCHAR(10),  -- References BuildingCode in Buildings table
+    BuildingID Int,
     Room VARCHAR(10),
     FOREIGN KEY (CampusID) REFERENCES Campuses(CampusID),
-    FOREIGN KEY (Building) REFERENCES Buildings(BuildingCode)
+    FOREIGN KEY (BuildingID) REFERENCES Buildings(BuildingID)
 );
 
 -- Create CourseSchedule Table
