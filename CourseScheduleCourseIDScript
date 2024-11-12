@@ -66,7 +66,8 @@ subjects_data = [
     (62, 'STAT', 'Statistics'),
     (63, 'THEA', 'Theatre'),
     (64, 'UNIV', 'University Studies'),
-    (65, 'USC', 'University of South Carolina')
+    (65, 'USC', 'University of South Carolina'),
+    (66, 'EDRD', 'Reading Education')
 ]
 
 # Sample data for Courses (course_id, course_number, course_description)
@@ -1214,7 +1215,34 @@ courses_data = [
     (1141, 64, 'Career and Life Planning', 'B250'),
     (1142, 64, 'Graduation with Leadership Distinction Captstone', 'B401'),
     (1143, 64, 'Leadership in Practice', 'B491'),
-    (1144, 65, 'Dummy Course', 'B999')
+    (1144, 65, 'Dummy Course', 'B999'),
+    (1145, 66, 'Children''s Literature', 'B218'),
+    (1146, 66, 'Foundations of Reading', 'B318'),
+    (1147, 66, 'Foundations of Reading for Secondary Teachers', 'B319'),
+    (1148, 66, 'Children''s Literature', 'B418'),
+    (1149, 66, 'Content Literacy for Secondary Teachers', 'B419'),
+    (1150, 66, 'Emergent Reading Methods and Assessment', 'B420'),
+    (1151, 66, 'Abeyance - Practicum in Emergent Reading', 'B420P'),
+    (1152, 66, 'Teaching Reading: Diagnosis and Remediation', 'B421'),
+    (1153, 66, 'Assessment of Literacy for Early Childhood and Elementary Teachers', 'B425'),
+    (1154, 66, 'Content Area Literacy for Early Childhood and Elementary Teachers', 'B428'),
+    (1155, 66, 'Content Literacy for Secondary Teachers', 'B429'),
+    (1156, 66, 'Instructional Strategies in Literacy for Early Childhood Teachers', 'B430'),
+    (1157, 66, 'Abeyance - Practicum in Intermedite Reading', 'B430P'),
+    (1158, 66, 'Instructional Strategies for Elementary Teachers', 'B433'),
+    (1159, 66, 'Literacy/Social Studies Practicum', 'B450P'),
+    (1160, 66, 'Foundations of Reading', 'B619'),
+    (1161, 66, 'Differentiation in Reading Instruction', 'B623'),
+    (1162, 66, 'Assessment & Instructional Strategies for Reading for ELLs', 'B624'),
+    (1163, 66, 'Assessment Strategies for Reading', 'B625'),
+    (1164, 66, 'Writing Across the Curriculum', 'B626'),
+    (1165, 66, 'Content Area Reading and Writing', 'B629'),
+    (1166, 66, 'Action Research for Literacy Education', 'B632'),
+    (1167, 66, 'Practicum in Assessing & Teaching English Language Learners', 'B640P'),
+    (1168, 66, 'Action Research for Literacy Coaching', 'B645'),
+    (1169, 66, 'Capstone: Literacy Coaching Seminar', 'B650'),
+    (1170, 65, 'Dummy Course', '999')
+
 ]
 
 # Create a mapping from concatenated CourseID to actual CourseID

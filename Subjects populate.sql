@@ -63,4 +63,5 @@ INSERT INTO Subjects (SubjectID, Subject, SubjectDescription) VALUES
     (62, 'STAT', 'Statistics'),
     (63, 'THEA', 'Theatre'),
     (64, 'UNIV', 'University Studies'),
-    (65, 'USC', 'University of South Carolina');
+    (65, 'USC', 'University of South Carolina'),
+    (66, 'EDRD', 'Reading Education');
