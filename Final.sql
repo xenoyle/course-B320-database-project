@@ -45,7 +45,6 @@ CREATE TABLE Buildings (
     BuildingID INT PRIMARY KEY,
     BuildingCode VARCHAR(10),
     BuildingName VARCHAR(255),
-    FOREIGN KEY (CampusID) REFERENCES Campuses(CampusID)
 );
 
 -- Create Courses Table
@@ -83,8 +82,6 @@ CREATE TABLE CourseSchedule (
     FOREIGN KEY (CourseID) REFERENCES Courses(CourseID),
     FOREIGN KEY (ProfessorID) REFERENCES Professors(ProfessorID),
     FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID),
-    FOREIGN KEY (CourseTypeID) REFERENCES CourseType(CourseTypeID),
-    CHECK ((ProfessorID IS NOT NULL) OR (ProfessorName IS NOT NULL))
 );
 
 -- Create Students Table
