@@ -1,4 +1,4 @@
-
+CREATE DATABASE UniversityCoursesDB;
 USE UniversityCoursesDB;
 -- Drop existing tables if they exist
 DROP TABLE IF EXISTS GPAHistory;
