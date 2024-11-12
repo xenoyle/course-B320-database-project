@@ -17,19 +17,19 @@ INSERT INTO Campuses (CampusID, CampusName, Address) VALUES
     (2, 'Beaufort Campus', '801 Carteret Street, Beaufort, SC 29902'),
     (3, 'Hilton Head Island Campus', '1 Sand Shark Drive, Hilton Head Island, SC 29928');
 
-INSERT INTO Buildings (BuildingID, CampusID, BuildingCode, BuildingName) VALUES
-    (1, 1, 'CMPCTR', 'Campus Center'),
-    (2, 1, 'HARG', 'Hargray Building'),
-    (3, 1, 'LIBR2', 'Library Building'),
-    (4, 1, 'RECCTR', 'Recreation Center'),
-    (5, 1, 'SCITEC', 'Science & Technology Building'),
-    (6, 2, 'ARTS', 'Art Studio'),
-    (7, 2, 'CFA', 'Center for the Arts'),
-    (8, 2, 'MSCIE', 'Marine Science Building'),
-    (9, 2, 'NWCSTL', 'New Castle Building'),
-    (10, 2, 'VAD', 'Visual Arts & Design Building'),
-    (11, 2, '1100BO', '1100 Boundary Street'),
-    (12, 3, 'HHHC', 'Hilton Head Hospitality Center');
+INSERT INTO Buildings (BuildingID, BuildingCode, BuildingName) VALUES
+    (1, 'CMPCTR', 'Campus Center'),
+    (2, 'HARG', 'Hargray Building'),
+    (3, 'LIBR2', 'Library Building'),
+    (4, 'RECCTR', 'Recreation Center'),
+    (5, 'SCITEC', 'Science & Technology Building'),
+    (6, 'ARTS', 'Art Studio'),
+    (7, 'CFA', 'Center for the Arts'),
+    (8, 'MSCIE', 'Marine Science Building'),
+    (9, 'NWCSTL', 'New Castle Building'),
+    (10, 'VAD', 'Visual Arts & Design Building'),
+    (11, '1100BO', '1100 Boundary Street'),
+    (12, 'HHHC', 'Hilton Head Hospitality Center');
 
 
 INSERT INTO Rooms (RoomID, CampusID, Building, Room) VALUES
