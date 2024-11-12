@@ -307,7 +307,7 @@ INSERT INTO Courses (CourseID, SubjectID, CourseName, CourseNumber) VALUES
     (306, 13, 'Data Management and Analytics', 'B622'),
     (307, 13, 'Industrial or Research Internship', 'B699'),
     (308, 13, 'Research Project', 'B797'),
-    (309, 13, 'MasterNULLs Thesis', 'B799'),
+    (309, 13, 'Master''s Thesis', 'B799'),
     (310, 14, 'Statics', 'B200'),
     (311, 14, 'Engineering Graphics and Visualization', 'B211'),
     (312, 14, 'Solid Mechanics', 'B260'),
@@ -1142,4 +1142,4 @@ INSERT INTO Courses (CourseID, SubjectID, CourseName, CourseNumber) VALUES
     (1141, 64, 'Career and Life Planning', 'B250'),
     (1142, 64, 'Graduation with Leadership Distinction Captstone', 'B401'),
     (1143, 64, 'Leadership in Practice', 'B491'),
-    (1144, 65, NULL, 'B999');
+    (1144, 65, 'Dummy Course', 'B999');
