@@ -1,3 +1,5 @@
+CREATE DATABASE UniversityCoursesDB;
+USE UniversityCoursesDB;
 -- Drop existing tables if they exist
 DROP TABLE IF EXISTS GPAHistory;
 DROP TABLE IF EXISTS GradePoints;
@@ -13,10 +15,6 @@ DROP TABLE IF EXISTS Subjects;
 DROP TABLE IF EXISTS Professors;
 DROP TABLE IF EXISTS StudentStatuses;
 Drop TABLE IF EXISTS CourseType;
-
-
-CREATE DATABASE UniversityCoursesDB; -- Highlight this line and run it then hightlight the use statement to use the databases
-USE UniversityCoursesDB;
 
 -- Create StudentStatuses Table
 CREATE TABLE StudentStatuses (
@@ -102,7 +100,7 @@ CREATE TABLE Students (
 
 -- Create Enrollments Table
 CREATE TABLE Enrollments (
-    EnrollmentID INT PRIMARY KEY,
+    EnrollmentID INT PRIMARY KEY INT PRIMARY KEY IDENTITY(1,1),
     StudentID INT,
     ScheduleID INT,
     EnrollmentDate DATE,
