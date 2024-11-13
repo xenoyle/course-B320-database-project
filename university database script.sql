@@ -100,7 +100,7 @@ CREATE TABLE Students (
 
 -- Create Enrollments Table
 CREATE TABLE Enrollments (
-    EnrollmentID INT PRIMARY KEY,
+    EnrollmentID INT PRIMARY KEY INT PRIMARY KEY IDENTITY(1,1),
     StudentID INT,
     ScheduleID INT,
     EnrollmentDate DATE,
