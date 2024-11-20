@@ -2075,6 +2075,33 @@ INSERT INTO Courses (CourseID, SubjectID, CourseName, CourseNumber) VALUES
     (1169, 66, 'Capstone: Literacy Coaching Seminar', 'B650'),
     (1170, 65, 'Dummy Course', '999');
 
+INSERT INTO Terms (TermName, TermYear)
+VALUES
+    -- 2024
+    ('Fall 2024', 2024),
+    ('Summer 2024', 2024),
+    ('Spring 2024', 2024),
+    -- 2023
+    ('Fall 2023', 2023),
+    ('Spring 2023', 2023),
+    ('Spring 2023', 2023),
+    -- 2022
+    ('Fall 2022', 2022),
+    ('Spring 2022', 2022),
+    ('Spring 2022', 2022),
+    -- 2021
+    ('Fall 2021', 2021),
+    ('Spring 2021', 2021),
+    ('Spring 2021', 2021),
+    -- 2020
+    ('Fall 2020', 2020),
+    ('Spring 2020', 2020),
+    ('Spring 2020', 2020),
+    -- 2019
+    ('Fall 2019', 2019),
+    ('Spring 2019', 2019),
+    ('Spring 2019', 2019);
+
 INSERT INTO CourseSchedule (ScheduleID, ProfessorID, CourseID, RoomID, CRN, AcademicPeriodDesc, Days, Time, MaxEnrollment, ActualEnrolled, CourseTypeID) VALUES
     (1, 1, 753, NULL, '28098', 'Fall 2024', NULL, NULL, 24, 25, 4),
     (2, 1, 753, NULL, '28106', 'Fall 2024', NULL, NULL, 24, 24, 4),
