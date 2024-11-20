@@ -6,6 +6,7 @@ DROP TABLE IF EXISTS GradePoints;
 DROP TABLE IF EXISTS ProfessorAssignments;
 DROP TABLE IF EXISTS Enrollments;
 DROP TABLE IF EXISTS Students;
+Drop TABLE IF EXISTS Terms;
 DROP TABLE IF EXISTS CourseSchedule;
 DROP TABLE IF EXISTS Rooms;
 DROP TABLE IF EXISTS Courses;
@@ -66,6 +67,12 @@ CREATE TABLE Rooms (
     Room VARCHAR(10),
     FOREIGN KEY (CampusID) REFERENCES Campuses(CampusID),
     FOREIGN KEY (BuildingID) REFERENCES Buildings(BuildingID)
+);
+
+CREATE TABLE Terms (
+    TermID INT IDENTITY(1,1) PRIMARY KEY,
+    TermName VARCHAR(50) NOT NULL,
+    TermYear INT NOT NULL
 );
 
 -- Create CourseSchedule Table
