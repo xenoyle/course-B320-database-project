@@ -17,6 +17,7 @@ DROP TABLE IF EXISTS Subjects;
 DROP TABLE IF EXISTS Professors;
 DROP TABLE IF EXISTS StudentStatuses;
 DROP TABLE IF EXISTS CourseType;
+DROP TABLE IF EXISTS Advisors;
 
 -- Create StudentStatuses Table
 CREATE TABLE StudentStatuses (
