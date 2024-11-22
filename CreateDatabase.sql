@@ -1,12 +1,13 @@
 CREATE DATABASE UniversityCoursesDB;
 USE UniversityCoursesDB;
+
 -- Drop existing tables if they exist
 DROP TABLE IF EXISTS GPAHistory;
 DROP TABLE IF EXISTS GradePoints;
 DROP TABLE IF EXISTS ProfessorAssignments;
 DROP TABLE IF EXISTS Enrollments;
 DROP TABLE IF EXISTS Students;
-Drop TABLE IF EXISTS Terms;
+DROP TABLE IF EXISTS Terms;
 DROP TABLE IF EXISTS CourseSchedule;
 DROP TABLE IF EXISTS Rooms;
 DROP TABLE IF EXISTS Courses;
@@ -15,7 +16,7 @@ DROP TABLE IF EXISTS Campuses;
 DROP TABLE IF EXISTS Subjects;
 DROP TABLE IF EXISTS Professors;
 DROP TABLE IF EXISTS StudentStatuses;
-Drop TABLE IF EXISTS CourseType;
+DROP TABLE IF EXISTS CourseType;
 
 -- Create StudentStatuses Table
 CREATE TABLE StudentStatuses (
@@ -47,7 +48,7 @@ CREATE TABLE Campuses (
 CREATE TABLE Buildings (
     BuildingID INT PRIMARY KEY,
     BuildingCode VARCHAR(10),
-    BuildingName VARCHAR(255),
+    BuildingName VARCHAR(255)
 );
 
 -- Create Courses Table
@@ -56,6 +57,7 @@ CREATE TABLE Courses (
     SubjectID INT,
     CourseNumber VARCHAR(10) NOT NULL,
     CourseName VARCHAR(255) NOT NULL,
+    Credits INT DEFAULT 3, -- Added a Credits column for course credit levels
     FOREIGN KEY (SubjectID) REFERENCES Subjects(SubjectID)
 );
 
@@ -63,12 +65,13 @@ CREATE TABLE Courses (
 CREATE TABLE Rooms (
     RoomID INT PRIMARY KEY,
     CampusID INT,
-    BuildingID Int,
+    BuildingID INT,
     Room VARCHAR(10),
     FOREIGN KEY (CampusID) REFERENCES Campuses(CampusID),
     FOREIGN KEY (BuildingID) REFERENCES Buildings(BuildingID)
 );
 
+-- Create Terms Table
 CREATE TABLE Terms (
     TermID INT IDENTITY(1,1) PRIMARY KEY,
     TermName VARCHAR(50) NOT NULL,
@@ -82,15 +85,15 @@ CREATE TABLE CourseSchedule (
     CourseID INT,
     ProfessorID INT,
     RoomID INT,
-    AcademicPeriodDesc VARCHAR(50),
+    TermID INT, -- Replaced AcademicPeriodDesc with TermID
     Days VARCHAR(20),
     Time VARCHAR(50),
-    MaxEnrollment INT,
-    ActualEnrolled INT,
     CourseTypeID INT,
     FOREIGN KEY (CourseID) REFERENCES Courses(CourseID),
     FOREIGN KEY (ProfessorID) REFERENCES Professors(ProfessorID),
     FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID),
+    FOREIGN KEY (TermID) REFERENCES Terms(TermID),
+    FOREIGN KEY (CourseTypeID) REFERENCES CourseType(CourseTypeID)
 );
 
 -- Create Students Table
@@ -107,7 +110,7 @@ CREATE TABLE Students (
 
 -- Create Enrollments Table
 CREATE TABLE Enrollments (
-    EnrollmentID INT PRIMARY KEY INT PRIMARY KEY IDENTITY(1,1),
+    EnrollmentID INT PRIMARY KEY IDENTITY(1,1),
     StudentID INT,
     ScheduleID INT,
     EnrollmentDate DATE,
@@ -125,20 +128,22 @@ CREATE TABLE ProfessorAssignments (
     FOREIGN KEY (ProfessorID) REFERENCES Professors(ProfessorID)
 );
 
--- Optional: Create GradePoints Table for GPA Calculation
+-- Create GradePoints Table for GPA Calculation
 CREATE TABLE GradePoints (
     LetterGrade CHAR(2) PRIMARY KEY,
     GradePoint DECIMAL(3, 2)
 );
 
--- Optional: Create GPAHistory Table (for tracking GPA changes over terms)
+-- Create GPAHistory Table (for tracking GPA changes over terms)
 CREATE TABLE GPAHistory (
-    GPAHistoryID INT PRIMARY KEY,
+    GPAHistoryID INT PRIMARY KEY IDENTITY(1,1),
     StudentID INT,
-    Term VARCHAR(20),
+    TermID INT, -- Changed to TermID to reference Terms table
     GPA DECIMAL(4, 2),
-    FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
+    FOREIGN KEY (TermID) REFERENCES Terms(TermID)
 );
+
 -- Create CourseType Table
 CREATE TABLE CourseType (
     CourseTypeID INT PRIMARY KEY,
