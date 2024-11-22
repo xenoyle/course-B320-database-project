@@ -16,7 +16,7 @@ JOIN
 JOIN 
     Courses c ON cs.CourseID = c.CourseID
 JOIN 
-    Terms t ON t.TermID = cs.AcademicPeriodDesc
+    Terms t ON t.TermID = cs.TermID
 WHERE 
     s.StudentID = @StudentID -- Replace @StudentID with the desired student ID
 ORDER BY 
@@ -53,7 +53,7 @@ JOIN
 JOIN 
     CourseSchedule cs ON e.ScheduleID = cs.ScheduleID
 JOIN 
-    Terms t ON t.TermID = cs.AcademicPeriodDesc
+    Terms t ON t.TermID = cs.TermID
 JOIN 
     StudentStatuses ss ON s.StatusID = ss.StatusID
 WHERE 
@@ -83,13 +83,14 @@ JOIN
 JOIN 
     Courses c ON cs.CourseID = c.CourseID
 JOIN 
-    Terms t ON t.TermID = cs.AcademicPeriodDesc
+    Terms t ON t.TermID = cs.TermID
 WHERE 
     c.CourseName LIKE '%Computer Science%'
 GROUP BY 
     c.CourseNumber, c.CourseName, t.TermName, t.TermYear
 ORDER BY 
     t.TermYear DESC, t.TermName;
+
 
 -- 5. Under Enrolled course:
 
@@ -108,6 +109,7 @@ GROUP BY
     c.CourseNumber, c.CourseName, cs.CRN
 HAVING 
     COUNT(e.EnrollmentID) < 10;
+
 
 
 -- 6. Gpa range
@@ -203,6 +205,7 @@ ORDER BY
     s.StudentID;
 
 
+
 -- 9. Semester by semester program summary
 
 SELECT 
@@ -225,6 +228,7 @@ GROUP BY
 ORDER BY 
     t.TermYear DESC, t.TermName;
 
+
 -- 10. Students repeating courses
 
 WITH CourseAttempts AS (
@@ -244,7 +248,7 @@ WITH CourseAttempts AS (
     JOIN 
         Courses c ON cs.CourseID = c.CourseID
     JOIN 
-        Terms t ON cs.AcademicPeriodDesc = t.TermID
+        Terms t ON cs.TermID = t.TermID
 )
 SELECT 
     s.StudentID,
@@ -262,9 +266,4 @@ SELECT
 FROM 
     CourseAttempts ca
 JOIN 
-    CourseAttempts ca2 ON ca.StudentID = ca2.StudentID AND ca.CourseID = ca2.CourseID AND ca.Attempt = 1 AND ca2.Attempt = 2
-JOIN 
-    Students s ON ca.StudentID = s.StudentID
-ORDER BY 
-    s.StudentID, ca.CourseNumber;
-
+    CourseAttempts ca2 ON ca.StudentID = ca2.StudentID AND ca.CourseID
