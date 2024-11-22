@@ -149,3 +149,10 @@ CREATE TABLE CourseType (
     CourseTypeID INT PRIMARY KEY,
     CourseTypeName VARCHAR(20) NOT NULL
 );
+CREATE TABLE Advisors (
+    AdvisorID INT PRIMARY KEY IDENTITY(1,1),
+    ProfessorID INT NOT NULL,
+    StudentID INT NOT NULL,
+    FOREIGN KEY (ProfessorID) REFERENCES Professors(ProfessorID),
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+);
