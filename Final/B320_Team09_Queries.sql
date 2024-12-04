@@ -18,7 +18,7 @@ JOIN
 JOIN 
     Terms t ON t.TermID = cs.TermID
 WHERE 
-    s.StudentID = 148 -- Replace with desired StudentID
+    s.StudentID = 50 -- Replace with desired StudentID
 ORDER BY 
     t.TermYear, t.TermName;
 
