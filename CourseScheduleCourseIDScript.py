@@ -19475,14 +19475,19 @@ transformed_schedule = []
 for schedule in course_schedule_data:
     schedule_id, professor_id, course_id, room_id, crn, academic_period_desc, days, time, max_enrollment, actual_enrolled, course_type_id = schedule
 
-    # Check if course_id is already a number
+    # Check if the course_id in course_schedule_data is a string
     if isinstance(course_id, int):  # Check if it's an integer
-        actual_course_id = course_id  # Keep the existing numeric CourseID
+        actual_course_id = course_id  # Keep the existing numeric course_id
     else:
         # Replace the concatenated CourseID with the actual CourseID
-        actual_course_id = None  # # Assuming course_mapping is defined elsewhere
+        actual_course_id = None  # Assuming course_mapping is defined elsewhere
         actual_course_id = course_mapping.get(course_id)
 
+
+    if course_type_id is 'Class':
+        course_type_id = 1
+    if course_type_id is 'Exam':
+        course_type_id = 1
     if room_id is None and days is None and time is None:
         course_type_id = 4
 
